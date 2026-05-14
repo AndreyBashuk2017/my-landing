@@ -1,0 +1,1743 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>СтройБлок — Дома из газосиликата под ключ в Калужской и Московской области</title>
+<meta name="description" content="Строим загородные дома из газосиликатного блока под ключ. 1–2 этажа, 60–500 м². Калужская и Московская область. Фиксированная цена в договоре. Гарантия 10 лет.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
+
+/* ─── Переменные ─── */
+:root {
+  --dark:        #1C1C18;
+  --dark2:       #252520;
+  --cream:       #F5F0E8;
+  --light:       #FAFAF7;
+  --beige:       #F0EBE0;
+  --accent:      #D4600A;
+  --accent-h:    #B85208;
+  --brown:       #8B6F47;
+  --green:       #5C7A5C;
+  --border:      #E0D8CC;
+  --text:        #1C1C18;
+  --muted:       #777;
+  --fh: 'Oswald', Georgia, serif;
+  --fb: 'Manrope', system-ui, sans-serif;
+  --r:  8px;
+  --rl: 16px;
+  --sh: 0 2px 16px rgba(0,0,0,.08);
+  --shh:0 8px 32px rgba(0,0,0,.16);
+  --tr: .22s ease-out;
+}
+
+/* ─── Reset ─── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--fb);color:var(--text);background:var(--light);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{cursor:pointer;font-family:var(--fb)}
+ul{list-style:none}
+
+/* ─── Контейнер ─── */
+.wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+@media(max-width:768px){.wrap{padding:0 20px}}
+
+/* ─── Секции ─── */
+.sec{padding:96px 0}
+@media(max-width:768px){.sec{padding:64px 0}}
+
+.sec-badge{display:inline-block;background:rgba(212,96,10,.1);color:var(--accent);font-size:11px;font-weight:700;padding:3px 12px;border-radius:100px;letter-spacing:.07em;text-transform:uppercase;margin-bottom:12px}
+.sec-title{font-family:var(--fh);font-size:clamp(26px,4vw,42px);line-height:1.15;margin-bottom:10px;text-transform:uppercase;letter-spacing:.02em}
+.sec-sub{font-size:16px;color:var(--muted);max-width:580px;margin-bottom:48px}
+
+/* ─── Кнопки ─── */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:15px 30px;border-radius:var(--r);font-family:var(--fb);font-size:15px;font-weight:700;border:none;transition:var(--tr);white-space:nowrap}
+.btn-pri{background:var(--accent);color:#fff;position:relative;overflow:hidden}
+.btn-pri::after{content:'';position:absolute;top:0;left:-110%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.22),transparent);animation:shimmer 3.8s ease-in-out infinite;pointer-events:none}
+.btn-pri:hover{background:var(--accent-h);transform:translateY(-2px);box-shadow:0 8px 28px rgba(212,96,10,.45)}
+.btn-sec{background:transparent;color:var(--accent);border:2px solid var(--accent)}
+.btn-sec:hover{background:rgba(212,96,10,.06)}
+.btn-ghost{background:transparent;color:var(--cream);border:1px solid rgba(245,240,232,.35)}
+.btn-ghost:hover{border-color:var(--cream);background:rgba(245,240,232,.06)}
+.btn-lg{padding:18px 36px;font-size:17px}
+.btn-full{width:100%;justify-content:center}
+
+/* ─── Анимации ─── */
+.anim{opacity:0;transform:translateY(28px);transition:opacity .6s ease-out,transform .6s ease-out}
+.anim.show{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}.d5{transition-delay:.5s}
+
+/* ──────────────────────────────────────────────────────
+   HEADER
+────────────────────────────────────────────────────── */
+.hdr{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(28,28,24,.96);backdrop-filter:blur(14px);border-bottom:1px solid rgba(245,240,232,.08);transition:var(--tr)}
+.hdr-in{display:flex;align-items:center;justify-content:space-between;height:68px;gap:20px}
+.logo{font-family:var(--fh);font-size:21px;font-weight:700;color:var(--cream);letter-spacing:.05em;white-space:nowrap}
+.logo em{color:var(--accent);font-style:normal}
+.nav{display:flex;gap:28px}
+.nav a{color:rgba(245,240,232,.65);font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;transition:var(--tr)}
+.nav a:hover{color:var(--cream)}
+.hdr-right{display:flex;align-items:center;gap:14px;flex-shrink:0}
+.hdr-phone{color:var(--cream);font-weight:700;font-size:15px;white-space:nowrap}
+.hdr-phone:hover{color:var(--accent)}
+.wa-btn{width:36px;height:36px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:17px;color:#fff;flex-shrink:0;transition:var(--tr)}
+.wa-btn:hover{transform:scale(1.1)}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:4px;cursor:pointer}
+.burger span{display:block;width:24px;height:2px;background:var(--cream);border-radius:2px;transition:transform .28s ease,opacity .28s ease,background .28s}
+.burger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.burger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.burger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.mob-menu{position:fixed;top:68px;left:0;right:0;z-index:999;background:var(--dark);padding:24px;border-top:1px solid rgba(255,255,255,.08);opacity:0;visibility:hidden;transform:translateY(-10px);transition:opacity .28s ease,transform .28s ease,visibility .28s;pointer-events:none}
+.mob-menu.open{opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto}
+.mob-menu nav{display:flex;flex-direction:column;gap:0;margin-bottom:20px}
+.mob-menu nav a{color:var(--cream);font-size:17px;font-weight:600;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.07)}
+.mob-menu-phones{display:flex;flex-direction:column;gap:10px}
+@media(max-width:1024px){.nav{display:none}.burger{display:flex}.hdr-phone{display:none}}
+@media(max-width:480px){.wa-btn{display:none}}
+
+/* ──────────────────────────────────────────────────────
+   HERO
+────────────────────────────────────────────────────── */
+.hero{min-height:100vh;background:var(--dark);position:relative;display:flex;flex-direction:column;justify-content:center;padding-top:68px;overflow:hidden}
+/* Фон-плейсхолдер имитирует загородный пейзаж */
+@keyframes heroGrad{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.hero-bg{position:absolute;inset:0;overflow:hidden}
+.hero-bg::before{content:'';position:absolute;inset:-15%;background:linear-gradient(-45deg,#1c2412,#2a3820,#181e0c,#201c0e,#2a3820,#1a2a14,#1c2412);background-size:300% 300%;animation:heroGrad 22s ease infinite}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(160deg,rgba(28,28,24,.88) 0%,rgba(28,28,24,.52) 55%,rgba(28,28,24,.84) 100%),repeating-linear-gradient(45deg,rgba(139,111,71,.04) 0,rgba(139,111,71,.04) 1px,transparent 1px,transparent 48px)}
+.hero-silhouette{position:absolute;bottom:0;left:0;right:0;height:48%;z-index:2;background:linear-gradient(180deg,transparent 0%,rgba(28,28,24,.9) 100%)}
+.hero-content{position:relative;z-index:2;padding:64px 0 80px}
+.hero-label{display:inline-block;background:rgba(212,96,10,.18);color:rgba(245,240,232,.85);font-size:12px;font-weight:700;padding:5px 14px;border-radius:100px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:24px;border:1px solid rgba(212,96,10,.3)}
+.hero h1{font-family:var(--fh);font-size:clamp(34px,6.5vw,80px);color:var(--cream);line-height:1.08;text-transform:uppercase;letter-spacing:.02em;max-width:820px;margin-bottom:28px}
+.hero h1 .ac{background:linear-gradient(135deg,#F5A030 0%,#D4600A 55%,#B85208 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-sub{font-size:clamp(15px,2vw,18px);color:rgba(245,240,232,.72);max-width:520px;margin-bottom:40px;line-height:1.7}
+.hero-utps{display:flex;gap:24px;margin-bottom:44px;flex-wrap:wrap}
+.utp-chip{display:flex;align-items:center;gap:10px;background:rgba(245,240,232,.06);border:1px solid rgba(245,240,232,.14);border-radius:var(--r);padding:12px 16px}
+.utp-icon{font-size:22px;flex-shrink:0}
+.utp-txt strong{display:block;font-size:13px;font-weight:700;color:var(--cream);letter-spacing:.04em;text-transform:uppercase}
+.utp-txt span{font-size:11px;color:rgba(245,240,232,.5)}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:14px}
+.hero-hint{font-size:12px;color:rgba(245,240,232,.38);margin-top:8px}
+.hero-stats{position:relative;z-index:2;padding:0 0 56px}
+.hero-stats-row{display:flex;gap:48px;align-items:center;flex-wrap:wrap}
+.hstat{text-align:left}
+.hstat-n{font-family:var(--fh);font-size:38px;font-weight:700;color:var(--accent);line-height:1}
+.hstat-l{font-size:12px;color:rgba(245,240,232,.5);margin-top:4px}
+.hstat-sep{width:1px;height:44px;background:rgba(245,240,232,.15)}
+@media(max-width:768px){.hero-stats-row{gap:24px}.hstat-sep{display:none}.hero-utps{flex-direction:column;gap:12px}}
+
+/* Волна-разделитель */
+.wave{display:block;width:100%;overflow:hidden;line-height:0;flex-shrink:0}
+.wave svg{display:block;width:100%}
+
+/* ──────────────────────────────────────────────────────
+   ПРЕИМУЩЕСТВА
+────────────────────────────────────────────────────── */
+.benefits{background:var(--light)}
+.ben-tabs{display:flex;gap:10px;margin-bottom:36px;flex-wrap:wrap}
+.tab{padding:9px 22px;border-radius:100px;border:2px solid var(--border);background:#fff;font-family:var(--fb);font-size:13px;font-weight:700;cursor:pointer;transition:var(--tr);color:var(--text)}
+.tab.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.ben-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px}
+.ben-set{display:none}.ben-set.on{display:contents}
+.ben-card{background:#fff;border:1px solid var(--border);border-radius:var(--rl);padding:26px;transition:var(--tr)}
+.ben-card:hover{transform:translateY(-4px);box-shadow:var(--shh)}
+.ben-ico{width:50px;height:50px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:14px}
+.ben-ico.a{background:rgba(212,96,10,.1)}
+.ben-ico.b{background:rgba(92,122,92,.1)}
+.ben-ico.c{background:rgba(139,111,71,.1)}
+.ben-ico.d{background:rgba(212,96,10,.08)}
+.ben-card h3{font-size:17px;font-weight:700;margin-bottom:7px}
+.ben-card p{font-size:13px;color:var(--muted);line-height:1.6}
+.ben-card .num{font-family:var(--fh);font-size:28px;color:var(--accent);margin-bottom:2px}
+
+/* ──────────────────────────────────────────────────────
+   ПРОЕКТЫ
+────────────────────────────────────────────────────── */
+.projects{background:var(--beige)}
+.proj-filter{display:flex;gap:8px;margin-bottom:32px;flex-wrap:wrap}
+.flt{padding:7px 18px;border-radius:100px;border:1.5px solid var(--border);background:#fff;font-family:var(--fb);font-size:12px;font-weight:700;cursor:pointer;transition:var(--tr);color:var(--text);text-transform:uppercase;letter-spacing:.04em}
+.flt.on{background:var(--dark);border-color:var(--dark);color:#fff}
+.flt:hover:not(.on){border-color:var(--dark)}
+.proj-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:22px}
+.proj-card{background:#fff;border-radius:var(--rl);overflow:hidden;box-shadow:var(--sh);transition:var(--tr)}
+.proj-card:hover{transform:translateY(-4px);box-shadow:var(--shh)}
+.proj-card.hidden{display:none}
+.proj-img{height:220px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:64px}
+.proj-img::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,.25) 100%)}
+.proj-tag{position:absolute;top:12px;left:12px;z-index:1;background:var(--dark);color:var(--cream);font-size:10px;font-weight:700;padding:4px 10px;border-radius:100px;letter-spacing:.06em;text-transform:uppercase}
+.proj-body{padding:20px 22px 22px}
+.proj-title{font-family:var(--fh);font-size:19px;margin-bottom:10px}
+.proj-meta{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:12px}
+.pm{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--muted)}
+.proj-price{font-family:var(--fh);font-size:22px;color:var(--accent);margin-bottom:14px}
+.proj-btn{width:100%;justify-content:center}
+/* Сейчас строим */
+.now-block{background:var(--dark);border-radius:var(--rl);padding:28px 32px;margin-top:40px;display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:20px;align-items:center}
+.now-item{display:flex;gap:12px;align-items:flex-start}
+.now-thumb{width:60px;height:60px;border-radius:var(--r);display:flex;align-items:center;justify-content:center;font-size:26px;flex-shrink:0}
+.now-info .badge-live{display:inline-block;background:#25D366;color:#fff;font-size:9px;font-weight:700;padding:2px 7px;border-radius:100px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:5px}
+.now-info h4{font-size:13px;font-weight:700;color:var(--cream);margin-bottom:2px}
+.now-info p{font-size:11px;color:rgba(245,240,232,.45)}
+@media(max-width:900px){.now-block{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.now-block{grid-template-columns:1fr}.proj-grid{grid-template-columns:1fr}}
+
+/* ──────────────────────────────────────────────────────
+   КАЛЬКУЛЯТОР
+────────────────────────────────────────────────────── */
+.calculator{background:var(--light)}
+.calc-wrap{background:#fff;border-radius:var(--rl);box-shadow:var(--sh);overflow:hidden;display:grid;grid-template-columns:1fr 360px}
+.calc-left{padding:48px}
+.calc-right{background:var(--dark);padding:44px;display:flex;flex-direction:column}
+.calc-step{margin-bottom:28px}
+.step-lbl{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--brown);margin-bottom:6px}
+.step-head{font-size:16px;font-weight:700;margin-bottom:12px}
+/* Range */
+.range-val{font-family:var(--fh);font-size:30px;color:var(--accent);line-height:1;margin-bottom:8px}
+.range-val em{font-size:15px;color:var(--muted);font-style:normal;font-weight:400}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:4px;background:var(--border);border-radius:2px;outline:none}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;background:var(--accent);border-radius:50%;cursor:pointer;box-shadow:0 2px 8px rgba(212,96,10,.4)}
+input[type=range]::-moz-range-thumb{width:20px;height:20px;background:var(--accent);border:none;border-radius:50%;cursor:pointer}
+.range-marks{display:flex;justify-content:space-between;font-size:11px;color:#bbb;margin-top:5px}
+/* Radio */
+.radio-row{display:flex;gap:9px;flex-wrap:wrap}
+.r-opt{flex:1;min-width:70px}
+.r-opt input{display:none}
+.r-opt label{display:block;padding:9px 14px;border:1.5px solid var(--border);border-radius:var(--r);text-align:center;font-size:13px;font-weight:600;cursor:pointer;transition:var(--tr)}
+.r-opt input:checked+label{background:var(--accent);border-color:var(--accent);color:#fff}
+.r-opt label:hover{border-color:var(--accent);color:var(--accent)}
+/* Packages */
+.pkg-row{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+.pkg-opt input{display:none}
+.pkg-lbl{display:block;padding:12px;border:1.5px solid var(--border);border-radius:var(--r);cursor:pointer;transition:var(--tr)}
+.pkg-lbl:hover{border-color:var(--accent)}
+.pkg-opt input:checked+.pkg-lbl{border-color:var(--accent);background:rgba(212,96,10,.05)}
+.pkg-name{display:block;font-size:12px;font-weight:700;margin-bottom:3px}
+.pkg-desc{font-size:10px;color:var(--muted);line-height:1.4}
+/* Result side */
+.res-lbl{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,240,232,.45);margin-bottom:6px}
+.res-price{font-family:var(--fh);font-size:44px;font-weight:700;color:var(--cream);line-height:1;margin-bottom:4px}
+.res-sub{font-size:13px;color:rgba(245,240,232,.45);margin-bottom:28px}
+.res-list{border-top:1px solid rgba(245,240,232,.1);margin-bottom:28px}
+.res-list li{display:flex;justify-content:space-between;font-size:12px;color:rgba(245,240,232,.55);padding:8px 0;border-bottom:1px solid rgba(245,240,232,.08)}
+.res-list li strong{color:var(--cream);font-weight:600}
+.calc-form-wrap{margin-top:auto}
+.calc-form-wrap p{font-size:12px;color:rgba(245,240,232,.4);text-align:center;margin-bottom:12px}
+.c-inp{width:100%;padding:13px 15px;border:1.5px solid rgba(245,240,232,.12);border-radius:var(--r);background:rgba(245,240,232,.05);color:var(--cream);font-family:var(--fb);font-size:14px;margin-bottom:10px;outline:none;transition:var(--tr)}
+.c-inp:focus{border-color:var(--accent);background:rgba(212,96,10,.06)}
+.c-inp::placeholder{color:rgba(245,240,232,.3)}
+.c-note{font-size:10px;color:rgba(245,240,232,.3);text-align:center;margin-top:8px;line-height:1.5}
+@media(max-width:900px){.calc-wrap{grid-template-columns:1fr}.calc-left{padding:32px 24px}.calc-right{padding:32px 24px}.pkg-row{grid-template-columns:1fr}}
+
+/* ──────────────────────────────────────────────────────
+   ЭТАПЫ
+────────────────────────────────────────────────────── */
+.process{background:var(--beige)}
+.proc-list{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.proc-item{background:#fff;border-radius:var(--r);padding:20px 22px;display:flex;gap:14px;align-items:flex-start;transition:var(--tr)}
+.proc-item:hover{box-shadow:var(--sh);transform:translateY(-2px)}
+.proc-n{width:34px;height:34px;background:var(--accent);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;margin-top:2px}
+.proc-n.done{background:var(--green)}
+.proc-txt h4{font-size:14px;font-weight:700;margin-bottom:3px}
+.proc-txt p{font-size:12px;color:var(--muted);line-height:1.5}
+.proc-time{display:inline-block;background:rgba(212,96,10,.1);color:var(--accent);font-size:10px;font-weight:700;padding:2px 8px;border-radius:100px;margin-top:6px;letter-spacing:.05em}
+@media(max-width:640px){.proc-list{grid-template-columns:1fr}}
+
+/* ──────────────────────────────────────────────────────
+   ОТЗЫВЫ
+────────────────────────────────────────────────────── */
+.reviews{background:var(--light)}
+.rating-row{display:flex;align-items:center;gap:16px;margin-bottom:44px;flex-wrap:wrap}
+.rat-badge{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:12px 18px}
+.rat-stars{color:#F5A623;font-size:19px;letter-spacing:1px}
+.rat-score{font-family:var(--fh);font-size:30px;color:var(--text)}
+.rat-info small{display:block;font-size:11px;color:var(--muted)}
+.rat-link{font-size:13px;color:var(--accent);font-weight:600;text-decoration:underline}
+/* Видео отзывы */
+.vid-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:28px}
+.vid-card{border-radius:var(--rl);overflow:hidden;box-shadow:var(--sh);transition:var(--tr);cursor:pointer}
+.vid-card:hover{transform:translateY(-4px);box-shadow:var(--shh)}
+.vid-thumb{height:190px;display:flex;align-items:center;justify-content:center;position:relative}
+.vid-thumb::after{content:'';position:absolute;inset:0;background:rgba(0,0,0,.25);transition:var(--tr)}
+.vid-card:hover .vid-thumb::after{background:rgba(0,0,0,.15)}
+.play{position:relative;z-index:1;width:58px;height:58px;background:rgba(255,255,255,.92);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;transition:var(--tr)}
+.vid-card:hover .play{transform:scale(1.1);background:#fff}
+.vid-info{background:#fff;padding:12px 16px}
+.vid-name{font-size:13px;font-weight:700;margin-bottom:2px}
+.vid-meta{font-size:11px;color:var(--muted)}
+/* Текстовые отзывы */
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rev-card{background:#fff;border-radius:var(--rl);padding:22px;box-shadow:var(--sh);transition:var(--tr)}
+.rev-card:hover{box-shadow:var(--shh)}
+.rev-hd{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.rev-av{width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;color:#fff;font-weight:700;flex-shrink:0}
+.rev-auth h4{font-size:13px;font-weight:700;margin-bottom:1px}
+.rev-auth small{font-size:11px;color:var(--muted)}
+.rev-stars{color:#F5A623;font-size:13px;margin-bottom:10px}
+.rev-text{font-size:13px;line-height:1.65;color:#555}
+.rev-date{font-size:10px;color:#ccc;margin-top:10px}
+@media(max-width:900px){.vid-grid{grid-template-columns:1fr}.rev-grid{grid-template-columns:1fr}}
+
+/* ──────────────────────────────────────────────────────
+   ГАРАНТИИ
+────────────────────────────────────────────────────── */
+.guarantees{background:var(--dark)}
+.guarantees .sec-title{color:var(--cream)}
+.guarantees .sec-sub{color:rgba(245,240,232,.55)}
+.gar-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:44px}
+.gar-card{background:rgba(245,240,232,.05);border:1px solid rgba(245,240,232,.1);border-radius:var(--rl);padding:26px;text-align:center}
+.gar-n{font-family:var(--fh);font-size:54px;font-weight:700;color:var(--accent);line-height:1;margin-bottom:2px}
+.gar-u{font-size:15px;font-weight:700;color:var(--cream);margin-bottom:8px}
+.gar-d{font-size:12px;color:rgba(245,240,232,.5);line-height:1.5}
+.doc-row{display:flex;gap:14px;flex-wrap:wrap}
+.doc-badge{display:flex;align-items:center;gap:12px;background:rgba(245,240,232,.05);border:1px solid rgba(245,240,232,.1);border-radius:var(--r);padding:14px 18px;cursor:pointer;transition:var(--tr);min-width:200px}
+.doc-badge:hover{background:rgba(245,240,232,.1);border-color:rgba(245,240,232,.22)}
+.doc-ico{font-size:26px}
+.doc-txt strong{display:block;font-size:12px;font-weight:700;color:var(--cream);margin-bottom:2px}
+.doc-txt small{font-size:10px;color:rgba(245,240,232,.4)}
+@media(max-width:900px){.gar-cards{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.gar-cards{grid-template-columns:1fr}}
+
+/* ──────────────────────────────────────────────────────
+   О КОМПАНИИ
+────────────────────────────────────────────────────── */
+.about{background:var(--light)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.a-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:28px}
+.a-stat{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:18px}
+.a-n{font-family:var(--fh);font-size:36px;color:var(--accent);line-height:1}
+.a-l{font-size:12px;color:var(--muted);margin-top:3px}
+.a-text{font-size:15px;color:#555;line-height:1.7;margin-bottom:18px}
+.soc-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.soc-btn{display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:9px 16px;font-size:12px;font-weight:700;transition:var(--tr)}
+.soc-btn:hover{border-color:var(--accent);color:var(--accent)}
+.team-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.team-card{background:#fff;border-radius:var(--rl);overflow:hidden;box-shadow:var(--sh);transition:var(--tr)}
+.team-card:hover{transform:translateY(-4px);box-shadow:var(--shh)}
+.team-photo{height:170px;display:flex;align-items:center;justify-content:center;font-size:52px}
+.team-info{padding:14px 16px}
+.team-name{font-size:14px;font-weight:700;margin-bottom:2px}
+.team-role{font-size:11px;color:var(--accent);font-weight:700;margin-bottom:5px;text-transform:uppercase;letter-spacing:.04em}
+.team-bio{font-size:11px;color:var(--muted);line-height:1.5}
+@media(max-width:900px){.about-grid{grid-template-columns:1fr;gap:40px}}
+
+/* ──────────────────────────────────────────────────────
+   FAQ
+────────────────────────────────────────────────────── */
+.faq{background:var(--beige)}
+.faq-list{max-width:800px}
+.faq-item{background:#fff;border-radius:var(--r);margin-bottom:9px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.05)}
+.faq-q{width:100%;text-align:left;padding:18px 22px;background:none;border:none;display:flex;justify-content:space-between;align-items:center;gap:14px;font-family:var(--fb);font-size:14px;font-weight:700;color:var(--text);transition:var(--tr);cursor:pointer}
+.faq-q:hover{color:var(--accent)}
+.faq-item.open .faq-q{color:var(--accent)}
+.faq-ico{width:26px;height:26px;border-radius:50%;border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;transition:var(--tr)}
+.faq-item.open .faq-ico{background:var(--accent);border-color:var(--accent);color:#fff;transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-a-in{padding:0 22px 18px;font-size:13px;line-height:1.7;color:#666;border-top:1px solid var(--border);padding-top:14px}
+
+/* ──────────────────────────────────────────────────────
+   ФИНАЛЬНЫЙ CTA
+────────────────────────────────────────────────────── */
+.final{background:linear-gradient(135deg,var(--dark) 0%,#2a2418 100%);text-align:center}
+.final .sec-title{color:var(--cream);font-size:clamp(26px,4vw,46px)}
+.final .sec-sub{color:rgba(245,240,232,.6);margin:0 auto 44px}
+.cta-form{max-width:460px;margin:0 auto}
+.f-inp{width:100%;padding:15px 18px;border:1.5px solid rgba(245,240,232,.12);border-radius:var(--r);background:rgba(245,240,232,.06);color:var(--cream);font-family:var(--fb);font-size:15px;margin-bottom:11px;outline:none;transition:var(--tr)}
+.f-inp:focus{border-color:var(--accent);background:rgba(212,96,10,.06)}
+.f-inp::placeholder{color:rgba(245,240,232,.3)}
+.f-note{font-size:11px;color:rgba(245,240,232,.3);margin-top:10px;line-height:1.5}
+.cta-alts{display:flex;justify-content:center;gap:12px;margin-top:28px;flex-wrap:wrap}
+.cta-alt{display:flex;align-items:center;gap:8px;padding:11px 18px;border:1px solid rgba(245,240,232,.18);border-radius:var(--r);color:var(--cream);font-size:13px;font-weight:600;transition:var(--tr)}
+.cta-alt:hover{border-color:var(--cream);background:rgba(245,240,232,.05)}
+.cta-contacts{display:flex;justify-content:center;gap:40px;margin-top:44px;flex-wrap:wrap}
+.cc-item{text-align:center}
+.cc-item strong{display:block;font-size:16px;color:var(--cream);margin-bottom:3px}
+.cc-item small{font-size:11px;color:rgba(245,240,232,.4)}
+.trust-row{display:flex;justify-content:center;gap:14px;margin-top:40px;flex-wrap:wrap}
+.trust-chip{background:rgba(245,240,232,.05);border:1px solid rgba(245,240,232,.1);border-radius:var(--r);padding:9px 16px;font-size:11px;color:rgba(245,240,232,.55);font-weight:700;display:flex;align-items:center;gap:7px}
+
+/* ──────────────────────────────────────────────────────
+   FOOTER
+────────────────────────────────────────────────────── */
+.footer{background:#111110;color:rgba(245,240,232,.5);padding:48px 0 24px}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:36px;margin-bottom:36px}
+.foot-col h4{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--cream);margin-bottom:14px}
+.foot-links{display:flex;flex-direction:column;gap:9px}
+.foot-links a{font-size:12px;transition:var(--tr)}
+.foot-links a:hover{color:var(--cream)}
+.foot-ci{display:flex;align-items:flex-start;gap:8px;font-size:12px;margin-bottom:10px}
+.foot-bot{border-top:1px solid rgba(245,240,232,.07);padding-top:22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;font-size:11px}
+.foot-bot a:hover{color:var(--cream)}
+@media(max-width:900px){.foot-grid{grid-template-columns:1fr 1fr;gap:28px}}
+@media(max-width:560px){.foot-grid{grid-template-columns:1fr}}
+
+/* ──────────────────────────────────────────────────────
+   МОБИЛЬНАЯ ПАНЕЛЬ
+────────────────────────────────────────────────────── */
+.mob-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:1000;background:var(--dark);border-top:1px solid rgba(245,240,232,.1);padding:12px 20px;gap:10px;padding-bottom:calc(12px + env(safe-area-inset-bottom))}
+@media(max-width:768px){.mob-bar{display:flex}body{padding-bottom:78px}}
+.mob-bar .btn{flex:1;justify-content:center;padding:13px 10px;font-size:13px}
+.mob-call{background:rgba(245,240,232,.08);color:var(--cream);border:1px solid rgba(245,240,232,.14)}
+
+/* Кнопка вверх */
+.go-top{position:fixed;bottom:104px;right:22px;width:42px;height:42px;background:var(--accent);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;box-shadow:0 4px 14px rgba(212,96,10,.4);opacity:0;transform:translateY(14px);transition:opacity .3s,transform .3s;z-index:990;cursor:pointer;border:none}
+.go-top.vis{opacity:1;transform:translateY(0)}
+@media(max-width:768px){.go-top{bottom:96px}}
+
+/* ─── Thank-you overlay ─── */
+.ty-overlay{display:none;position:fixed;inset:0;z-index:2000;background:rgba(28,28,24,.92);align-items:center;justify-content:center}
+.ty-overlay.show{display:flex}
+.ty-box{background:#fff;border-radius:var(--rl);padding:48px 40px;max-width:440px;width:90%;text-align:center;position:relative}
+.ty-box h2{font-family:var(--fh);font-size:28px;color:var(--text);margin-bottom:12px;text-transform:uppercase}
+.ty-box p{font-size:15px;color:var(--muted);line-height:1.6;margin-bottom:24px}
+.ty-close{position:absolute;top:14px;right:18px;background:none;border:none;font-size:22px;color:var(--muted);cursor:pointer;line-height:1}
+
+/* ══════════════════════════════════════
+   WOW EFFECTS
+══════════════════════════════════════ */
+
+/* Scroll progress bar */
+#scroll-prog{position:fixed;top:0;left:0;height:3px;width:0%;background:linear-gradient(90deg,var(--accent),#F5A030);z-index:1300;border-radius:0 2px 2px 0;pointer-events:none;transition:width .08s linear}
+
+/* Button shimmer keyframe */
+@keyframes shimmer{0%{left:-110%}40%,100%{left:120%}}
+
+/* Hero floating particles */
+@keyframes floatPar{0%{transform:translateY(0) rotate(0deg);opacity:0}8%{opacity:.2}85%{opacity:.08}100%{transform:translateY(-95vh) rotate(480deg);opacity:0}}
+.par{position:absolute;border-radius:50%;pointer-events:none;animation:floatPar linear infinite;z-index:3}
+
+/* Extended animation variants */
+.anim-left{opacity:0;transform:translateX(-44px);transition:opacity .72s ease-out,transform .72s ease-out}
+.anim-left.show{opacity:1;transform:translateX(0)}
+.anim-right{opacity:0;transform:translateX(44px);transition:opacity .72s ease-out,transform .72s ease-out}
+.anim-right.show{opacity:1;transform:translateX(0)}
+.anim-scale{opacity:0;transform:scale(.88);transition:opacity .6s ease-out,transform .6s cubic-bezier(.34,1.56,.64,1)}
+.anim-scale.show{opacity:1;transform:scale(1)}
+
+/* Header scrolled state */
+.hdr.scrolled{border-bottom-color:rgba(245,240,232,.16);box-shadow:0 6px 40px rgba(0,0,0,.32)}
+
+/* Enhanced card hovers */
+.ben-card:hover{transform:translateY(-6px);box-shadow:0 20px 52px rgba(212,96,10,.13),0 4px 16px rgba(0,0,0,.07);border-color:rgba(212,96,10,.22)}
+.proj-card:hover{transform:translateY(-6px);box-shadow:0 24px 64px rgba(0,0,0,.2),0 0 0 1px rgba(212,96,10,.14)}
+.proj-card:hover .proj-img{transform:scale(1.04)}
+.proj-img{transition:transform .5s ease}
+.vid-card:hover{transform:translateY(-5px);box-shadow:0 20px 56px rgba(0,0,0,.22)}
+.gar-card{transition:background .3s,transform .35s ease-out,box-shadow .35s,border-color .3s}
+.gar-card:hover{background:rgba(245,240,232,.1);transform:translateY(-6px);box-shadow:0 18px 52px rgba(0,0,0,.38);border-color:rgba(245,240,232,.22)}
+.team-card:hover{transform:translateY(-7px);box-shadow:0 20px 56px rgba(0,0,0,.18)}
+.faq-item{transition:box-shadow .25s}
+.faq-item:hover{box-shadow:0 4px 20px rgba(0,0,0,.1)}
+.rev-card:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(0,0,0,.1)}
+.rev-card{transition:transform .3s ease-out,box-shadow .3s}
+.proc-item:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(0,0,0,.1)}
+.proc-n{transition:transform .25s ease-out,box-shadow .25s}
+.proc-item:hover .proc-n{transform:scale(1.14);box-shadow:0 4px 14px rgba(212,96,10,.42)}
+.doc-badge:hover{transform:translateY(-2px)}
+.doc-badge{transition:background .25s,border-color .25s,transform .25s}
+
+/* Stat counters glow */
+.hstat-n{transition:text-shadow .3s}
+.hstat:hover .hstat-n{text-shadow:0 0 24px rgba(212,96,10,.5)}
+
+/* Nav active underline */
+.nav a{position:relative}
+.nav a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--accent);border-radius:1px;transition:width .25s ease-out}
+.nav a:hover::after{width:100%}
+
+/* UTP chips hover */
+.utp-chip{transition:background .25s,border-color .25s,transform .25s}
+.utp-chip:hover{background:rgba(245,240,232,.1);border-color:rgba(212,96,10,.3);transform:translateY(-2px)}
+
+/* Gradient badge */
+.sec-badge{border:1px solid rgba(212,96,10,.2)}
+
+/* Now-block item hover */
+.now-item{transition:opacity .25s}
+.now-block:hover .now-item{opacity:.7}
+.now-block:hover .now-item:hover{opacity:1}
+
+/* Scroll reveal glow on guarantee numbers */
+.gar-n{transition:color .4s,text-shadow .4s}
+.gar-card:hover .gar-n{text-shadow:0 0 32px rgba(212,96,10,.5)}
+
+/* Subtle grain texture on final CTA */
+.final::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.04'/%3E%3C/svg%3E");opacity:.5;pointer-events:none;z-index:0}
+.final .wrap{position:relative;z-index:1}
+.final{position:relative}
+
+/* ─── Textarea в форме ─── */
+.f-textarea{resize:vertical;min-height:88px;line-height:1.55}
+
+/* ═══ АНИМИРОВАННЫЙ ПОПАП УСПЕХА ═══ */
+.ty-overlay{display:none;position:fixed;inset:0;z-index:2000;background:rgba(28,28,24,.94);align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(6px)}
+.ty-overlay.show{display:flex}
+.ty-box{background:#fff;border-radius:20px;padding:44px 36px;max-width:440px;width:100%;text-align:center;position:relative;box-shadow:0 32px 80px rgba(0,0,0,.4);animation:tyBoxIn .55s cubic-bezier(.34,1.56,.64,1) both}
+@keyframes tyBoxIn{from{opacity:0;transform:translateY(36px) scale(.94)}to{opacity:1;transform:translateY(0) scale(1)}}
+.ty-close{position:absolute;top:14px;right:16px;background:none;border:none;font-size:24px;color:#bbb;cursor:pointer;line-height:1;transition:.2s}
+.ty-close:hover{color:var(--text)}
+
+/* SVG checkmark animation */
+.ty-check{width:88px;height:88px;margin:0 auto 18px}
+.ty-check svg{width:88px;height:88px}
+.ty-circle{stroke-dasharray:226;stroke-dashoffset:226;animation:drawCircle .7s ease-out forwards .1s}
+.ty-tick{stroke-dasharray:60;stroke-dashoffset:60;animation:drawTick .45s ease-out forwards .75s}
+@keyframes drawCircle{to{stroke-dashoffset:0}}
+@keyframes drawTick{to{stroke-dashoffset:0}}
+
+.ty-title{font-family:var(--fh);font-size:26px;color:var(--text);margin-bottom:8px;text-transform:uppercase;opacity:0;transform:translateY(12px);animation:fadeUpEl .4s ease-out forwards .9s}
+.ty-desc{font-size:15px;color:var(--muted);line-height:1.6;margin-bottom:20px;opacity:0;transform:translateY(12px);animation:fadeUpEl .4s ease-out forwards 1.05s}
+.ty-btns{display:flex;flex-direction:column;gap:10px;opacity:0;transform:translateY(12px);animation:fadeUpEl .4s ease-out forwards 1.2s}
+.ty-note{font-size:11px;color:#bbb;margin-top:14px;opacity:0;animation:fadeUpEl .3s ease-out forwards 1.35s}
+@keyframes fadeUpEl{to{opacity:1;transform:translateY(0)}}
+
+/* Прогресс-бар таймера */
+.ty-progress{width:100%;height:3px;background:rgba(0,0,0,.08);border-radius:2px;margin-top:18px;overflow:hidden}
+.ty-prog-bar{height:100%;background:linear-gradient(90deg,var(--green),var(--accent));transform-origin:left;animation:tyProgTick 5s linear forwards}
+@keyframes tyProgTick{from{transform:scaleX(1)}to{transform:scaleX(0)}}
+
+/* Конфетти канвас */
+#confettiCanvas{position:fixed;inset:0;pointer-events:none;z-index:2001}
+</style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════════
+     HEADER
+════════════════════════════════════════════════════ -->
+<div id="scroll-prog"></div>
+
+<header class="hdr">
+  <div class="wrap hdr-in">
+    <a href="#hero" class="logo">Строй<em>Блок</em></a>
+    <nav class="nav">
+      <a href="#projects">Проекты</a>
+      <a href="#calculator">Цены</a>
+      <a href="#process">Этапы</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <div class="hdr-right">
+      <a href="tel:+74842000000" class="hdr-phone">+7 (484) 200-00-00</a>
+      <a href="https://wa.me/74842000000" class="wa-btn" title="WhatsApp">💬</a>
+      <a href="#calculator" class="btn btn-pri" style="padding:10px 20px;font-size:13px">Получить расчёт</a>
+      <button class="burger" id="burgerBtn" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Мобильное меню -->
+<div class="mob-menu" id="mobMenu">
+  <nav>
+    <a href="#projects">Проекты</a>
+    <a href="#calculator">Цены и калькулятор</a>
+    <a href="#process">Этапы работы</a>
+    <a href="#reviews">Отзывы клиентов</a>
+    <a href="#about">О компании</a>
+    <a href="#faq">Вопросы и ответы</a>
+    <a href="#contacts">Контакты</a>
+  </nav>
+  <div class="mob-menu-phones">
+    <a href="tel:+74842000000" class="btn btn-pri btn-full">📞 Позвонить</a>
+    <a href="https://wa.me/74842000000" class="btn btn-ghost btn-full">💬 WhatsApp</a>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════════ -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-silhouette"></div>
+
+  <!-- Floating particles -->
+  <div class="par" style="width:5px;height:5px;left:7%;bottom:8%;background:rgba(212,96,10,.55);animation-duration:15s;animation-delay:0s"></div>
+  <div class="par" style="width:3px;height:3px;left:21%;bottom:18%;background:rgba(212,96,10,.45);animation-duration:20s;animation-delay:5s"></div>
+  <div class="par" style="width:4px;height:4px;left:58%;bottom:6%;background:rgba(212,96,10,.5);animation-duration:17s;animation-delay:2s"></div>
+  <div class="par" style="width:6px;height:6px;left:78%;bottom:22%;background:rgba(139,111,71,.45);animation-duration:24s;animation-delay:8s"></div>
+  <div class="par" style="width:3px;height:3px;left:42%;bottom:14%;background:rgba(212,96,10,.5);animation-duration:18s;animation-delay:11s"></div>
+  <div class="par" style="width:4px;height:4px;left:91%;bottom:35%;background:rgba(92,122,92,.4);animation-duration:13s;animation-delay:4s"></div>
+  <div class="par" style="width:5px;height:5px;left:33%;bottom:10%;background:rgba(212,96,10,.35);animation-duration:21s;animation-delay:7s"></div>
+
+  <!-- Декоративный дом-силуэт -->
+  <svg style="position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:min(700px,90%);opacity:.06" viewBox="0 0 700 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="350,20 80,160 620,160" fill="#F5F0E8"/>
+    <rect x="120" y="160" width="460" height="120" fill="#F5F0E8"/>
+    <rect x="300" y="200" width="100" height="80" fill="#1C1C18"/>
+    <rect x="150" y="175" width="70" height="60" fill="#1C1C18"/>
+    <rect x="480" y="175" width="70" height="60" fill="#1C1C18"/>
+  </svg>
+
+  <div class="wrap">
+    <div class="hero-content">
+      <div class="hero-label">🏠 Калужская и Московская область · 1–2 этажа · 60–500 м²</div>
+      <h1>Дом из газосиликата<br><span class="ac">под ключ</span> за 6–9 месяцев —<br>цена не изменится</h1>
+      <p class="hero-sub">Строим тёплые загородные дома из газосиликатного блока с фиксированной стоимостью в договоре. Без скрытых доплат. Гарантия 10 лет на конструктив.</p>
+
+      <div class="hero-utps">
+        <div class="utp-chip">
+          <span class="utp-icon">📋</span>
+          <div class="utp-txt">
+            <strong>Фиксированная цена</strong>
+            <span>Смета прописана в договоре — ни рубля сверх</span>
+          </div>
+        </div>
+        <div class="utp-chip">
+          <span class="utp-icon">📅</span>
+          <div class="utp-txt">
+            <strong>Сдача в срок</strong>
+            <span>Штраф за каждый день просрочки</span>
+          </div>
+        </div>
+        <div class="utp-chip">
+          <span class="utp-icon">🛡️</span>
+          <div class="utp-txt">
+            <strong>Гарантия 10 лет</strong>
+            <span>На несущие конструкции и кровлю</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-ctas">
+        <a href="#calculator" class="btn btn-pri btn-lg">Рассчитать стоимость →</a>
+        <a href="#projects" class="btn btn-ghost btn-lg">Смотреть проекты</a>
+      </div>
+      <p class="hero-hint">Расчёт бесплатно — за 1 рабочий день, без звонков и давления</p>
+    </div>
+  </div>
+
+  <div class="wrap hero-stats">
+    <div class="hero-stats-row">
+      <div class="hstat"><div class="hstat-n" data-count="83">0</div><div class="hstat-l">домов построено</div></div>
+      <div class="hstat-sep"></div>
+      <div class="hstat"><div class="hstat-n" data-count="7">0</div><div class="hstat-l">лет на рынке</div></div>
+      <div class="hstat-sep"></div>
+      <div class="hstat"><div class="hstat-n" data-count="10">0</div><div class="hstat-l">лет гарантии</div></div>
+      <div class="hstat-sep"></div>
+      <div class="hstat"><div class="hstat-n">4.9★</div><div class="hstat-l">на Яндекс.Картах</div></div>
+    </div>
+  </div>
+
+  <div class="wave">
+    <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,0 C360,60 1080,0 1440,40 L1440,60 L0,60 Z" fill="#FAFAF7"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════
+     ПРЕИМУЩЕСТВА
+════════════════════════════════════════════════════ -->
+<section class="benefits sec" id="benefits">
+  <div class="wrap">
+    <div class="anim-left"><span class="sec-badge">Почему выбирают нас</span></div>
+    <h2 class="sec-title anim d1">Газосиликат и наша компания</h2>
+    <p class="sec-sub anim-left d2">Не потому что дешевле — а потому что теплее, быстрее и надёжнее</p>
+
+    <div class="ben-tabs anim d2">
+      <button class="tab on" data-tab="mat">🧱 Преимущества материала</button>
+      <button class="tab" data-tab="com">🏢 Преимущества компании</button>
+    </div>
+
+    <div class="ben-grid">
+      <!-- Материал -->
+      <div class="ben-set on" data-set="mat">
+        <div class="ben-card anim">
+          <div class="ben-ico a">🌡️</div>
+          <div class="num">−40%</div>
+          <h3>Тепло без переплат</h3>
+          <p>Стена 400 мм из газосиликата держит тепло как кирпичная кладка в 1,5 метра. Экономия на отоплении — до 40% в год по сравнению с кирпичным домом.</p>
+        </div>
+        <div class="ben-card anim d1">
+          <div class="ben-ico b">⚡</div>
+          <div class="num">3–4 нед.</div>
+          <h3>Строим быстро</h3>
+          <p>Коробка дома за 3–4 недели. Газосиликатный блок в 5–7 раз больше кирпича — монтаж идёт в разы быстрее. Один сезон — и вы въезжаете.</p>
+        </div>
+        <div class="ben-card anim d2">
+          <div class="ben-ico c">🌱</div>
+          <div class="num">100 лет</div>
+          <h3>Срок службы</h3>
+          <p>Газосиликат не горит, не гниёт, не привлекает грызунов. Состав: известь, кварцевый песок, вода, цемент. Экологично. Расчётный срок службы — 80–100 лет.</p>
+        </div>
+        <div class="ben-card anim d3">
+          <div class="ben-ico d">💰</div>
+          <div class="num">−30%</div>
+          <h3>Экономия на фундаменте</h3>
+          <p>Газосиликатный блок в 3 раза легче кирпича. Меньше нагрузка — менее мощный фундамент. Экономия на основании достигает 20–30%.</p>
+        </div>
+      </div>
+      <!-- Компания -->
+      <div class="ben-set" data-set="com">
+        <div class="ben-card anim">
+          <div class="ben-ico a">📋</div>
+          <h3>Фиксированная смета</h3>
+          <p>Прописываем полную стоимость в договоре до начала работ. Ни одной доплаты в процессе — гарантируем письменно. За 7 лет ни один клиент не получил счёт сверх сметы.</p>
+        </div>
+        <div class="ben-card anim d1">
+          <div class="ben-ico b">👷</div>
+          <h3>Собственная бригада</h3>
+          <p>Работаем без субподрядчиков — только штатные сотрудники. Прораб с профильным образованием и 10+ летним опытом. Вы знаете имя человека, который строит ваш дом.</p>
+        </div>
+        <div class="ben-card anim d2">
+          <div class="ben-ico c">📸</div>
+          <h3>Контроль онлайн</h3>
+          <p>Еженедельный фотоотчёт с объекта в мессенджер. Личный чат с прорабом. Не нужно ехать на стройку — всё видно в телефоне.</p>
+        </div>
+        <div class="ben-card anim d3">
+          <div class="ben-ico d">📍</div>
+          <h3>Работаем рядом</h3>
+          <p>Реализованные объекты в Калужской и Московской областях. Предложим посетить готовый дом или строящийся объект — бесплатно, без обязательств.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="anim mt-32" style="text-align:center">
+      <a href="#projects" class="btn btn-sec">Смотреть наши проекты →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════
+     ПРОЕКТЫ
+════════════════════════════════════════════════════ -->
+<section class="projects sec" id="projects">
+  <div class="wrap">
+    <div class="anim-right"><span class="sec-badge">Реализованные объекты</span></div>
+    <h2 class="sec-title anim d1">Построенные дома</h2>
+    <p class="sec-sub anim-right d2">83 дома сдано. Каждый проект — с площадью, сроком и стоимостью</p>
+
+    <div class="proj-filter anim d2">
+      <button class="flt on" data-f="all">Все</button>
+      <button class="flt" data-f="one">Одноэтажные</button>
+      <button class="flt" data-f="two">Двухэтажные</button>
+      <button class="flt" data-f="small">До 100 м²</button>
+      <button class="flt" data-f="mid">100–200 м²</button>
+      <button class="flt" data-f="big">От 200 м²</button>
+    </div>
+
+    <div class="proj-grid">
+      <!-- Карточка 1 -->
+      <div class="proj-card anim" data-type="one" data-size="small">
+        <div class="proj-img" style="background:linear-gradient(135deg,#3a5a2a 0%,#4e7a3a 60%,#2a4020 100%)">
+          🏡
+          <span class="proj-tag">Одноэтажный</span>
+        </div>
+        <div class="proj-body">
+          <div class="proj-title">Дом 85 м² · 1 этаж</div>
+          <div class="proj-meta">
+            <span class="pm">📍 Малоярославец, Калужская обл.</span>
+            <span class="pm">⏱ 5 месяцев</span>
+          </div>
+          <div class="proj-price">от 3,8 млн ₽</div>
+          <button class="btn btn-sec proj-btn" onclick="showTY()">Хочу такой же →</button>
+        </div>
+      </div>
+      <!-- Карточка 2 -->
+      <div class="proj-card anim d1" data-type="two" data-size="mid">
+        <div class="proj-img" style="background:linear-gradient(135deg,#4a5a2a 0%,#6a7a3a 50%,#3a4a20 100%)">
+          🏠
+          <span class="proj-tag">Двухэтажный</span>
+        </div>
+        <div class="proj-body">
+          <div class="proj-title">Дом 140 м² · 2 этажа</div>
+          <div class="proj-meta">
+            <span class="pm">📍 Обнинск, Калужская обл.</span>
+            <span class="pm">⏱ 8 месяцев</span>
+          </div>
+          <div class="proj-price">от 6,2 млн ₽</div>
+          <button class="btn btn-sec proj-btn" onclick="showTY()">Хочу такой же →</button>
+        </div>
+      </div>
+      <!-- Карточка 3 -->
+      <div class="proj-card anim d2" data-type="one" data-size="mid">
+        <div class="proj-img" style="background:linear-gradient(135deg,#2a4a3a 0%,#3a6a4a 55%,#1a3a2a 100%)">
+          🏘️
+          <span class="proj-tag">Одноэтажный</span>
+        </div>
+        <div class="proj-body">
+          <div class="proj-title">Дом 120 м² · 1 этаж</div>
+          <div class="proj-meta">
+            <span class="pm">📍 Боровск, Калужская обл.</span>
+            <span class="pm">⏱ 7 месяцев</span>
+          </div>
+          <div class="proj-price">от 5,4 млн ₽</div>
+          <button class="btn btn-sec proj-btn" onclick="showTY()">Хочу такой же →</button>
+        </div>
+      </div>
+      <!-- Карточка 4 -->
+      <div class="proj-card anim" data-type="two" data-size="big">
+        <div class="proj-img" style="background:linear-gradient(135deg,#3a3a2a 0%,#5a5a3a 50%,#2a2a1a 100%)">
+          🏰
+          <span class="proj-tag">Двухэтажный</span>
+        </div>
+        <div class="proj-body">
+          <div class="proj-title">Дом 220 м² · 2 этажа</div>
+          <div class="proj-meta">
+            <span class="pm">📍 Подольск, Московская обл.</span>
+            <span class="pm">⏱ 11 месяцев</span>
+          </div>
+          <div class="proj-price">от 9,8 млн ₽</div>
+          <button class="btn btn-sec proj-btn" onclick="showTY()">Хочу такой же →</button>
+        </div>
+      </div>
+      <!-- Карточка 5 -->
+      <div class="proj-card anim d1" data-type="one" data-size="small">
+        <div class="proj-img" style="background:linear-gradient(135deg,#2a4a2a 0%,#3a6a3a 50%,#1a3a1a 100%)">
+          🏡
+          <span class="proj-tag">Одноэтажный</span>
+        </div>
+        <div class="proj-body">
+          <div class="proj-title">Дом 72 м² · 1 этаж</div>
+          <div class="proj-meta">
+            <span class="pm">📍 Жуков, Калужская обл.</span>
+            <span class="pm">⏱ 4 месяца</span>
+          </div>
+          <div class="proj-price">от 3,2 млн ₽</div>
+          <button class="btn btn-sec proj-btn" onclick="showTY()">Хочу такой же →</button>
+        </div>
+      </div>
+      <!-- Карточка 6 -->
+      <div class="proj-card anim d2" data-type="two" data-size="mid">
+        <div class="proj-img" style="background:linear-gradient(135deg,#4a4a3a 0%,#6a6a4a 50%,#3a3a2a 100%)">
+          🏠
+          <span class="proj-tag">Двухэтажный</span>
+        </div>
+        <div class="proj-body">
+          <div class="proj-title">Дом 160 м² · 2 этажа</div>
+          <div class="proj-meta">
+            <span class="pm">📍 Чехов, Московская обл.</span>
+            <span class="pm">⏱ 9 месяцев</span>
+          </div>
+          <div class="proj-price">от 7,1 млн ₽</div>
+          <button class="btn btn-sec proj-btn" onclick="showTY()">Хочу такой же →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Сейчас строим -->
+    <div class="now-block anim">
+      <div class="now-item">
+        <div class="now-thumb" style="background:rgba(212,96,10,.15)">🧱</div>
+        <div class="now-info">
+          <span class="badge-live">● В процессе</span>
+          <h4>Фундамент</h4>
+          <p>Тарутино, Калужская обл. · начат март 2026</p>
+        </div>
+      </div>
+      <div class="now-item">
+        <div class="now-thumb" style="background:rgba(92,122,92,.15)">🏗️</div>
+        <div class="now-info">
+          <span class="badge-live">● В процессе</span>
+          <h4>Возведение стен</h4>
+          <p>Серпухов, Московская обл. · этап: коробка</p>
+        </div>
+      </div>
+      <div class="now-item">
+        <div class="now-thumb" style="background:rgba(139,111,71,.15)">🔨</div>
+        <div class="now-info">
+          <span class="badge-live">● В процессе</span>
+          <h4>Кровля и окна</h4>
+          <p>Малоярославец · сдача: июль 2026</p>
+        </div>
+      </div>
+      <a href="#contacts" class="btn btn-ghost" style="white-space:nowrap">Telegram-дневник →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════
+     КАЛЬКУЛЯТОР
+════════════════════════════════════════════════════ -->
+<section class="calculator sec" id="calculator">
+  <div class="wrap">
+    <div class="anim"><span class="sec-badge">Стоимость строительства</span></div>
+    <h2 class="sec-title anim d1">Узнайте цену вашего дома за 1 минуту</h2>
+    <p class="sec-sub anim d2">Выберите параметры — ориентировочная стоимость появится сразу. Точный расчёт — за 1 рабочий день, бесплатно.</p>
+
+    <div class="calc-wrap anim-scale d2">
+      <!-- Левая часть — параметры -->
+      <div class="calc-left">
+
+        <div class="calc-step">
+          <div class="step-lbl">Шаг 1</div>
+          <div class="step-head">Площадь дома</div>
+          <div class="range-val" id="areaVal">120 <em>м²</em></div>
+          <input type="range" min="60" max="500" value="120" id="areaRange" oninput="calcUpdate()">
+          <div class="range-marks"><span>60 м²</span><span>200 м²</span><span>300 м²</span><span>500 м²</span></div>
+        </div>
+
+        <div class="calc-step">
+          <div class="step-lbl">Шаг 2 — Этажность</div>
+          <div class="radio-row">
+            <label class="r-opt"><input type="radio" name="floor" value="1" checked onchange="calcUpdate()"><label>1 этаж</label></label>
+            <label class="r-opt"><input type="radio" name="floor" value="1.5" onchange="calcUpdate()"><label>1,5 этажа</label></label>
+            <label class="r-opt"><input type="radio" name="floor" value="2" onchange="calcUpdate()"><label>2 этажа</label></label>
+          </div>
+        </div>
+
+        <div class="calc-step">
+          <div class="step-lbl">Шаг 3 — Тип фундамента</div>
+          <div class="radio-row">
+            <label class="r-opt"><input type="radio" name="found" value="0" checked onchange="calcUpdate()"><label>Плита</label></label>
+            <label class="r-opt"><input type="radio" name="found" value="1" onchange="calcUpdate()"><label>Лента</label></label>
+            <label class="r-opt"><input type="radio" name="found" value="2" onchange="calcUpdate()"><label>Сваи</label></label>
+          </div>
+        </div>
+
+        <div class="calc-step">
+          <div class="step-lbl">Шаг 4 — Комплектация</div>
+          <div class="pkg-row">
+            <label class="pkg-opt"><input type="radio" name="pkg" value="base" onchange="calcUpdate()"><span class="pkg-lbl"><span class="pkg-name">Коробка</span><span class="pkg-desc">Фундамент, стены, перекрытия, кровля</span></span></label>
+            <label class="pkg-opt"><input type="radio" name="pkg" value="warm" onchange="calcUpdate()"><span class="pkg-lbl"><span class="pkg-name">Тёплый контур</span><span class="pkg-desc">+ окна, двери, утепление</span></span></label>
+            <label class="pkg-opt"><input type="radio" name="pkg" value="full" checked onchange="calcUpdate()"><span class="pkg-lbl"><span class="pkg-name">Под ключ ★</span><span class="pkg-desc">+ инженерия и отделка</span></span></label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Правая часть — результат -->
+      <div class="calc-right">
+        <div>
+          <div class="res-lbl">Ориентировочная стоимость</div>
+          <div class="res-price" id="resPrice">6,8 млн ₽</div>
+          <div class="res-sub" id="resSub">Под ключ · 120 м² · 1 этаж</div>
+
+          <ul class="res-list" id="resList">
+            <li><span>Фундамент</span><strong id="rFund">~900 000 ₽</strong></li>
+            <li><span>Коробка из газосиликата</span><strong id="rBox">~1 800 000 ₽</strong></li>
+            <li><span>Кровля и окна</span><strong id="rRoof">~700 000 ₽</strong></li>
+            <li><span>Инженерия и отделка</span><strong id="rFin">~3 400 000 ₽</strong></li>
+          </ul>
+        </div>
+
+        <div class="calc-form-wrap">
+          <p>Точный расчёт с разбивкой — бесплатно, за 1 день</p>
+          <input class="c-inp" type="text" placeholder="Ваше имя" id="calcName">
+          <input class="c-inp" type="tel" placeholder="+7 (___) ___-__-__" id="calcPhone">
+          <button class="btn btn-pri btn-full" onclick="submitForm('calcForm')">Получить точный расчёт →</button>
+          <p class="c-note">Перезвоним в течение 15 минут или напишем в WhatsApp — как удобнее</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════
+     ЭТАПЫ
+════════════════════════════════════════════════════ -->
+<section class="process sec" id="process">
+  <div class="wrap">
+    <div class="anim-left"><span class="sec-badge">Как мы работаем</span></div>
+    <h2 class="sec-title anim d1">10 этапов от заявки до ключей</h2>
+    <p class="sec-sub anim-left d2">На каждом этапе — фотоотчёт и ваш контроль. Никаких сюрпризов.</p>
+
+    <div class="proc-list">
+      <div class="proc-item anim">
+        <div class="proc-n done">✓</div>
+        <div class="proc-txt">
+          <h4>Заявка и консультация</h4>
+          <p>Обсуждаем пожелания, бюджет и участок. Бесплатно, без обязательств.</p>
+          <span class="proc-time">1–2 дня</span>
+        </div>
+      </div>
+      <div class="proc-item anim d1">
+        <div class="proc-n done">✓</div>
+        <div class="proc-txt">
+          <h4>Выезд геолога на участок</h4>
+          <p>Исследуем грунт, определяем оптимальный фундамент. Бесплатно при заключении договора.</p>
+          <span class="proc-time">3–5 дней</span>
+        </div>
+      </div>
+      <div class="proc-item anim d2">
+        <div class="proc-n">3</div>
+        <div class="proc-txt">
+          <h4>Выбор или разработка проекта</h4>
+          <p>Выбираете из каталога или заказываете индивидуальный проект. Помогаем с планировкой.</p>
+          <span class="proc-time">1–2 недели</span>
+        </div>
+      </div>
+      <div class="proc-item anim d3">
+        <div class="proc-n">4</div>
+        <div class="proc-txt">
+          <h4>Договор с фиксированной сметой</h4>
+          <p>Прописываем цену, сроки и ответственность. Смета не изменится — гарантируем.</p>
+          <span class="proc-time">1–3 дня</span>
+        </div>
+      </div>
+      <div class="proc-item anim">
+        <div class="proc-n">5</div>
+        <div class="proc-txt">
+          <h4>Фундамент</h4>
+          <p>Монолитная плита, лента или сваи — по результатам геологии. Фотоотчёт каждого этапа.</p>
+          <span class="proc-time">4–6 недель</span>
+        </div>
+      </div>
+      <div class="proc-item anim d1">
+        <div class="proc-n">6</div>
+        <div class="proc-txt">
+          <h4>Коробка из газосиликата</h4>
+          <p>Монтаж стен из блоков D500, армирование рядов, монолитные пояса. Один блок = 7–8 кирпичей.</p>
+          <span class="proc-time">8–12 недель</span>
+        </div>
+      </div>
+      <div class="proc-item anim d2">
+        <div class="proc-n">7</div>
+        <div class="proc-txt">
+          <h4>Кровля и окна</h4>
+          <p>Стропильная система, кровельное покрытие, установка окон и входных дверей.</p>
+          <span class="proc-time">3–4 недели</span>
+        </div>
+      </div>
+      <div class="proc-item anim d3">
+        <div class="proc-n">8</div>
+        <div class="proc-txt">
+          <h4>Инженерные системы</h4>
+          <p>Электрика, водоснабжение, канализация, отопление (в комплектации «под ключ»).</p>
+          <span class="proc-time">4–6 недель</span>
+        </div>
+      </div>
+      <div class="proc-item anim">
+        <div class="proc-n">9</div>
+        <div class="proc-txt">
+          <h4>Чистовая отделка</h4>
+          <p>Штукатурка, стяжка, плитка, покраска. Готовы к заезду или под самоотделку.</p>
+          <span class="proc-time">4–8 недель</span>
+        </div>
+      </div>
+      <div class="proc-item anim d1">
+        <div class="proc-n">10</div>
+        <div class="proc-txt">
+          <h4>Сдача и гарантия</h4>
+          <p>Акт приёма-передачи. Гарантийный паспорт. Гарантия 10 лет на конструктив.</p>
+          <span class="proc-time">Ключи в руках</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="anim mt-32" style="text-align:center">
+      <button class="btn btn-pri btn-lg" onclick="showTY()">Записаться на бесплатную консультацию →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════
+     ОТЗЫВЫ
+════════════════════════════════════════════════════ -->
+<section class="reviews sec" id="reviews">
+  <div class="wrap">
+    <div class="anim-right"><span class="sec-badge">Что говорят клиенты</span></div>
+    <h2 class="sec-title anim d1">Семьи, которые уже живут<br>в наших домах</h2>
+
+    <div class="rating-row anim d2">
+      <div class="rat-badge">
+        <div class="rat-stars">★★★★★</div>
+        <div class="rat-score">4.9</div>
+        <div class="rat-info"><strong>Яндекс.Карты</strong><small>87 отзывов</small></div>
+      </div>
+      <div class="rat-badge">
+        <div class="rat-stars">★★★★★</div>
+        <div class="rat-score">4.8</div>
+        <div class="rat-info"><strong>2ГИС</strong><small>54 отзыва</small></div>
+      </div>
+      <a href="#" class="rat-link">Читать все отзывы на Яндексе →</a>
+    </div>
+
+    <!-- Видео отзывы -->
+    <div class="vid-grid anim d1">
+      <div class="vid-card">
+        <div class="vid-thumb" style="background:linear-gradient(135deg,#2a4a2a,#4a7a4a)">
+          <div class="play">▶</div>
+        </div>
+        <div class="vid-info">
+          <div class="vid-name">Семья Петровых</div>
+          <div class="vid-meta">Малоярославец · 140 м² · сдан 2024</div>
+        </div>
+      </div>
+      <div class="vid-card">
+        <div class="vid-thumb" style="background:linear-gradient(135deg,#3a2a4a,#5a4a7a)">
+          <div class="play">▶</div>
+        </div>
+        <div class="vid-info">
+          <div class="vid-name">Андрей К.</div>
+          <div class="vid-meta">Жуков · 85 м² · сдан 2024</div>
+        </div>
+      </div>
+      <div class="vid-card">
+        <div class="vid-thumb" style="background:linear-gradient(135deg,#4a3a2a,#7a5a3a)">
+          <div class="play">▶</div>
+        </div>
+        <div class="vid-info">
+          <div class="vid-name">Наталья и Игорь</div>
+          <div class="vid-meta">Обнинск · 160 м² · сдан 2025</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Текстовые отзывы -->
+    <div class="rev-grid">
+      <div class="rev-card anim">
+        <div class="rev-hd">
+          <div class="rev-av" style="background:#5C7A5C">А</div>
+          <div class="rev-auth"><h4>Андрей Маслов</h4><small>Жуков, 160 м², январь 2025</small></div>
+        </div>
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">Боялся, что цена вырастет в процессе — не выросла ни на рубль. Прораб присылал фото каждую неделю, я даже не ездил на объект первые три месяца. Сдали на 2 недели раньше срока.</p>
+        <div class="rev-date">Яндекс.Карты · январь 2025</div>
+      </div>
+      <div class="rev-card anim d1">
+        <div class="rev-hd">
+          <div class="rev-av" style="background:#8B6F47">Е</div>
+          <div class="rev-auth"><h4>Елена Соколова</h4><small>Малоярославец, 120 м², сентябрь 2024</small></div>
+        </div>
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">Выбирали между каркасом и газосиликатом долго. Менеджер объяснил разницу без давления, помог с проектом. Дом тёплый — в феврале при −20° было комфортно без дополнительных обогревателей.</p>
+        <div class="rev-date">2ГИС · сентябрь 2024</div>
+      </div>
+      <div class="rev-card anim d2">
+        <div class="rev-hd">
+          <div class="rev-av" style="background:#D4600A">С</div>
+          <div class="rev-auth"><h4>Сергей Белов</h4><small>Серпухов, 200 м², март 2025</small></div>
+        </div>
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">Строили дом с участком в 60 км от Москвы. Ни разу не почувствовал, что компания недоступна — чат с прорабом работал оперативно. Смета не изменилась. Рекомендую без оговорок.</p>
+        <div class="rev-date">Яндекс.Карты · март 2025</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════
+     ГАРАНТИИ
+════════════════════════════════════════════════════ -->
+<section class="guarantees sec" id="guarantees">
+  <div class="wave" style="margin-bottom:-1px;transform:scaleY(-1)rotate(180deg)">
+    <svg viewBox="0 0 1440 50" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,50 C400,0 1040,50 1440,20 L1440,50 Z" fill="#FAFAF7"/>
+    </svg>
+  </div>
+
+  <div class="wrap">
+    <div class="anim"><span class="sec-badge" style="background:rgba(245,240,232,.1);color:rgba(245,240,232,.7)">Гарантии и документы</span></div>
+    <h2 class="sec-title anim d1">Почему нам можно доверить строительство</h2>
+    <p class="sec-sub anim d2">Факты, которые можно проверить прямо сейчас</p>
+
+    <div class="gar-cards">
+      <div class="gar-card anim">
+        <div class="gar-n">10</div>
+        <div class="gar-u">лет</div>
+        <div class="gar-d">Гарантия на несущие конструкции: фундамент, стены, перекрытия</div>
+      </div>
+      <div class="gar-card anim d1">
+        <div class="gar-n">5</div>
+        <div class="gar-u">лет</div>
+        <div class="gar-d">На кровлю и фасадную систему</div>
+      </div>
+      <div class="gar-card anim d2">
+        <div class="gar-n">2</div>
+        <div class="gar-u">года</div>
+        <div class="gar-d">На инженерные системы: водоснабжение, электрика, отопление</div>
+      </div>
+      <div class="gar-card anim d3">
+        <div class="gar-n">0₽</div>
+        <div class="gar-u">сверх сметы</div>
+        <div class="gar-d">Цена в договоре не изменится. Риски роста цен на материалы — наши.</div>
+      </div>
+    </div>
+
+    <div class="doc-row anim d1">
+      <div class="doc-badge" onclick="showTY()">
+        <span class="doc-ico">🏛️</span>
+        <div class="doc-txt"><strong>Допуск СРО НОСТРОЙ</strong><small>№ ХХХХ · Проверить в реестре →</small></div>
+      </div>
+      <div class="doc-badge" onclick="showTY()">
+        <span class="doc-ico">📄</span>
+        <div class="doc-txt"><strong>Шаблон договора (PDF)</strong><small>Смотрите условия до встречи</small></div>
+      </div>
+      <div class="doc-badge" onclick="showTY()">
+        <span class="doc-ico">📊</span>
+        <div class="doc-txt"><strong>Пример сметы 120 м² (PDF)</strong><small>Реальная разбивка по статьям</small></div>
+      </div>
+      <div class="doc-badge" onclick="showTY()">
+        <span class="doc-ico">🏅</span>
+        <div class="doc-txt"><strong>Партнёр Bonolit</strong><small>Гарантия качества материала</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════
+     О КОМПАНИИ
+════════════════════════════════════════════════════ -->
+<section class="about sec" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <!-- Левая колонка -->
+      <div>
+        <span class="sec-badge anim">О компании</span>
+        <h2 class="sec-title anim d1">Кто строит<br>ваш дом</h2>
+
+        <div class="a-stats anim d2">
+          <div class="a-stat"><div class="a-n" data-count="83">0</div><div class="a-l">построенных домов</div></div>
+          <div class="a-stat"><div class="a-n" data-count="7">0</div><div class="a-l">лет на рынке</div></div>
+          <div class="a-stat"><div class="a-n" data-count="18">0</div><div class="a-l">человек в команде</div></div>
+          <div class="a-stat"><div class="a-n" data-count="12">0</div><div class="a-l">лет ср. стаж прораба</div></div>
+        </div>
+
+        <p class="a-text anim d2">Мы работаем в Калужской и Московской области с 2018 года. Специализируемся исключительно на газосиликатных домах — это наша единственная технология, которую мы знаем досконально.</p>
+        <p class="a-text anim d2">Никаких субподрядчиков. Все строительные работы выполняют наши штатные сотрудники. Прораб — это не случайный человек с биржи, а постоянный работник с проверенной историей.</p>
+
+        <div class="soc-row anim d3">
+          <a href="#" class="soc-btn">✈️ Telegram-дневник стройки</a>
+          <a href="#" class="soc-btn">▶ YouTube-туры по домам</a>
+          <a href="#" class="soc-btn">👥 ВКонтакте</a>
+        </div>
+      </div>
+
+      <!-- Правая колонка — команда -->
+      <div>
+        <div class="team-grid anim d2">
+          <div class="team-card">
+            <div class="team-photo" style="background:linear-gradient(135deg,#3a4a2a,#5a6a3a)">👨‍💼</div>
+            <div class="team-info">
+              <div class="team-name">Алексей Громов</div>
+              <div class="team-role">Директор</div>
+              <div class="team-bio">Основал компанию в 2018. Прораб с 2010 года. Лично контролирует каждый объект.</div>
+            </div>
+          </div>
+          <div class="team-card">
+            <div class="team-photo" style="background:linear-gradient(135deg,#2a3a4a,#3a5a6a)">👷</div>
+            <div class="team-info">
+              <div class="team-name">Дмитрий Ковалёв</div>
+              <div class="team-role">Главный прораб</div>
+              <div class="team-bio">14 лет в строительстве. Сдал 47 объектов. Специализация — газосиликатные дома.</div>
+            </div>
+          </div>
+          <div class="team-card">
+            <div class="team-photo" style="background:linear-gradient(135deg,#4a3a2a,#6a5a3a)">👩‍💻</div>
+            <div class="team-info">
+              <div class="team-name">Марина Сидорова</div>
+              <div class="team-role">Менеджер проекта</div>
+              <div class="team-bio">Ваш координатор от первого звонка до ключей. Отвечает в течение 1 часа.</div>
+            </div>
+          </div>
+          <div class="team-card">
+            <div class="team-photo" style="background:linear-gradient(135deg,#3a2a4a,#5a3a6a)">📐</div>
+            <div class="team-info">
+              <div class="team-name">Павел Орлов</div>
+              <div class="team-role">Инженер-проектировщик</div>
+              <div class="team-bio">МГСУ. 8 лет проектирования малоэтажных домов. Разработал 120+ проектов.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="anim d3 mt-16" style="text-align:center">
+          <button class="btn btn-sec" onclick="showTY()">Записаться на экскурсию на объект →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════
+     FAQ
+════════════════════════════════════════════════════ -->
+<section class="faq sec" id="faq">
+  <div class="wrap">
+    <div class="anim"><span class="sec-badge">Вопросы и ответы</span></div>
+    <h2 class="sec-title anim d1">Часто задаваемые вопросы</h2>
+    <p class="sec-sub anim d2">Отвечаем честно — без уклончивых формулировок</p>
+
+    <div class="faq-list anim d2">
+      <div class="faq-item">
+        <button class="faq-q">Газосиликатный блок — не хрупкий ли материал? Не потрескается?<span class="faq-ico">+</span></button>
+        <div class="faq-a"><div class="faq-a-in">Трещины в газосиликатных домах — следствие нарушения технологии, а не свойства материала. При правильном армировании рядов, монолитных поясах и грамотном фундаменте дом простоит 80–100 лет без трещин. Мы соблюдаем ГОСТ 31360-2007 и армируем каждые 3–4 ряда. Готовы показать дома 5+ лет в эксплуатации в вашем районе.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Сколько стоит построить дом из газосиликата под ключ?<span class="faq-ico">+</span></button>
+        <div class="faq-a"><div class="faq-a-in">Стоимость зависит от площади, этажности и комплектации. Ориентировочно: от 35 000 ₽/м² (коробка) до 58 000 ₽/м² (под ключ с отделкой). Для дома 120 м² под ключ — от 6,2 млн рублей. Точный расчёт с разбивкой по статьям — бесплатно, за 1 рабочий день. Воспользуйтесь калькулятором выше или оставьте заявку.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Может ли цена вырасти в процессе строительства?<span class="faq-ico">+</span></button>
+        <div class="faq-a"><div class="faq-a-in">Нет. Мы фиксируем полную стоимость в договоре подряда до начала работ. Если материалы подорожали — это наши риски, не ваши. За 7 лет работы ни один клиент не получил счёт сверх подписанной сметы. Именно поэтому мы просим заранее составить подробную смету — чтобы потом не было сюрпризов ни для вас, ни для нас.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Сколько времени занимает строительство дома?<span class="faq-ico">+</span></button>
+        <div class="faq-a"><div class="faq-a-in">Дом 100–150 м² под ключ: 6–9 месяцев. Коробка (фундамент + стены + кровля): 3–5 месяцев. Точный срок зависит от площади, этажности и комплектации — указываем в договоре. За каждый день просрочки сверх оговорённого срока выплачиваем штраф, прописанный в договоре.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Можно ли строить зимой?<span class="faq-ico">+</span></button>
+        <div class="faq-a"><div class="faq-a-in">Да, при температуре до −5°C включительно. Используем противоморозные добавки в кладочный раствор. Кладку газосиликата при сильных морозах (ниже −10°C) не ведём — качество материала важнее скорости. Фундаментные работы при морозах ниже −10°C также останавливаем. Об этом честно предупреждаем до подписания договора.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Нужен ли дополнительный утеплитель при стенах 400 мм?<span class="faq-ico">+</span></button>
+        <div class="faq-a"><div class="faq-a-in">Для Калужской и Московской области при стене из газосиликата D500 толщиной 400 мм утеплитель фасада не обязателен по теплотехническим нормам (СП 50.13330). Многие клиенты добавляют 50–100 мм минваты или пенополистирола для снижения расходов на отопление на 15–25% дополнительно. Обсудим на этапе проекта.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Вы работаете со своей бригадой или привлекаете субподрядчиков?<span class="faq-ico">+</span></button>
+        <div class="faq-a"><div class="faq-a-in">Все строительные работы — только наши штатные сотрудники. Прораб — постоянный работник с трудовой книжкой и 10+ летним стажем именно в газосиликатном строительстве. Субподрядчиков не привлекаем принципиально: это наш стандарт качества. Вы всегда знаете, кто конкретно работает на вашем объекте.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Как я могу контролировать ход строительства?<span class="faq-ico">+</span></button>
+        <div class="faq-a"><div class="faq-a-in">Еженедельно присылаем фотоотчёт с объекта в WhatsApp или Telegram. У вас есть личный чат с прорабом — пишите в любое время, ответ в течение 1–2 часов. По желанию — видеозвонок с объекта в удобное время. Приехать лично можно в любой день — предупредите за день. Также ведём дневник стройки в Telegram-канале.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Можно ли взять ипотеку на строительство дома?<span class="faq-ico">+</span></button>
+        <div class="faq-a"><div class="faq-a-in">Да. Работаем по программам семейной ипотеки, ипотеки на ИЖС и IT-ипотеки. Помогаем собрать пакет документов для банка и сопровождаем процесс одобрения. Свяжитесь с нашим менеджером — подберём оптимальную программу под ваш случай.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Что входит в понятие «под ключ»?<span class="faq-ico">+</span></button>
+        <div class="faq-a"><div class="faq-a-in">Фундамент + стены из газосиликата D500 + перекрытия + кровля + окна и входная дверь + утепление фасада + разводка электрики, водоснабжения и отопления + чистовая отделка стен, полов, потолков. Готов жить — берёте мебель и заезжаете. Полный список работ прилагается к договору в виде отдельного приложения.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════
+     ФИНАЛЬНЫЙ CTA
+════════════════════════════════════════════════════ -->
+<section class="final sec" id="contacts">
+  <div class="wrap">
+    <span class="sec-badge" style="background:rgba(245,240,232,.1);color:rgba(245,240,232,.7)">Начать строительство</span>
+    <h2 class="sec-title anim d1">Получите бесплатный расчёт<br>стоимости вашего дома</h2>
+    <p class="sec-sub anim d2">Наш специалист свяжется с вами в течение 15 минут, ответит на вопросы и пришлёт варианты проектов под ваш бюджет</p>
+
+    <div class="cta-form anim d2">
+      <input class="f-inp" type="text" placeholder="Ваше имя *" id="ctaName" autocomplete="name">
+      <input class="f-inp" type="tel" placeholder="+7 (___) ___-__-__ *" id="ctaPhone" autocomplete="tel">
+      <input class="f-inp" type="email" placeholder="Email (необязательно)" id="ctaEmail" autocomplete="email">
+      <textarea class="f-inp f-textarea" placeholder="Расскажите о проекте — площадь, этажность, регион, пожелания..." id="ctaMsg" rows="3"></textarea>
+      <button class="btn btn-pri btn-full btn-lg" onclick="submitForm('ctaForm')">Отправить заявку →</button>
+      <p class="f-note">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности. Не передаём данные третьим лицам.</p>
+    </div>
+
+    <div class="cta-alts anim d3">
+      <a href="tel:+74842000000" class="cta-alt">📞 +7 (484) 200-00-00</a>
+      <a href="https://wa.me/74842000000" class="cta-alt">💬 Написать в WhatsApp</a>
+      <a href="https://t.me/stroyblok" class="cta-alt">✈️ Написать в Telegram</a>
+    </div>
+
+    <div class="cta-contacts anim d3">
+      <div class="cc-item"><strong>📍 Калуга, ул. Строителей, 14</strong><small>Офис · Пн–Пт 9:00–19:00, Сб 10:00–16:00</small></div>
+      <div class="cc-item"><strong>📞 +7 (484) 200-00-00</strong><small>Звонки · Пн–Сб 9:00–19:00</small></div>
+      <div class="cc-item"><strong>✉️ info@stroyblok.ru</strong><small>Email · ответим за 2 часа</small></div>
+    </div>
+
+    <div class="trust-row anim d4">
+      <div class="trust-chip">🏛️ СРО НОСТРОЙ</div>
+      <div class="trust-chip">🏅 Партнёр Bonolit</div>
+      <div class="trust-chip">⭐ 4.9 на Яндексе</div>
+      <div class="trust-chip">🛡️ Гарантия 10 лет</div>
+      <div class="trust-chip">📋 Фиксированная смета</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <span class="logo" style="display:block;margin-bottom:12px">Строй<em style="color:var(--accent)">Блок</em></span>
+        <p style="font-size:13px;line-height:1.6;max-width:260px">Строим загородные дома из газосиликата под ключ в Калужской и Московской области с 2018 года.</p>
+        <p style="font-size:11px;margin-top:12px">ИНН: 4027123456 · ОГРН: 1234567890123</p>
+      </div>
+      <div>
+        <h4>Навигация</h4>
+        <ul class="foot-links">
+          <li><a href="#projects">Наши проекты</a></li>
+          <li><a href="#calculator">Калькулятор цен</a></li>
+          <li><a href="#process">Этапы работы</a></li>
+          <li><a href="#reviews">Отзывы</a></li>
+          <li><a href="#about">О компании</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Услуги</h4>
+        <ul class="foot-links">
+          <li><a href="#calculator">Дома 1 этаж</a></li>
+          <li><a href="#calculator">Дома 2 этажа</a></li>
+          <li><a href="#calculator">Коробка под ключ</a></li>
+          <li><a href="#calculator">Тёплый контур</a></li>
+          <li><a href="#calculator">Полный под ключ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Контакты</h4>
+        <div class="foot-ci"><span>📍</span><span>Калуга, ул. Строителей, 14</span></div>
+        <div class="foot-ci"><span>📞</span><a href="tel:+74842000000">+7 (484) 200-00-00</a></div>
+        <div class="foot-ci"><span>✉️</span><a href="mailto:info@stroyblok.ru">info@stroyblok.ru</a></div>
+        <div class="foot-ci"><span>🕐</span><span>Пн–Пт 9:00–19:00</span></div>
+        <div style="display:flex;gap:10px;margin-top:14px">
+          <a href="#" style="font-size:20px">✈️</a>
+          <a href="#" style="font-size:20px">💬</a>
+          <a href="#" style="font-size:20px">▶️</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© 2018–2026 СтройБлок. Все права защищены.</span>
+      <span style="display:flex;gap:16px">
+        <a href="#">Политика конфиденциальности</a>
+        <a href="#">Договор оферты</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<!-- Мобильная панель -->
+<div class="mob-bar">
+  <a href="tel:+74842000000" class="btn mob-call">📞 Позвонить</a>
+  <a href="#calculator" class="btn btn-pri">Рассчитать цену</a>
+</div>
+
+<!-- Кнопка вверх -->
+<button class="go-top" id="goTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<!-- Конфетти канвас (поверх оверлея) -->
+<canvas id="confettiCanvas"></canvas>
+
+<!-- Спасибо-оверлей -->
+<div class="ty-overlay" id="tyOverlay">
+  <div class="ty-box">
+    <button class="ty-close" onclick="closeTY()">×</button>
+
+    <!-- Анимированная галочка SVG -->
+    <div class="ty-check">
+      <svg viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle class="ty-circle" cx="44" cy="44" r="40" stroke="#5C7A5C" stroke-width="3.5" fill="none"/>
+        <path class="ty-tick" d="M27 44 L39 56 L61 30" stroke="#5C7A5C" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+    </div>
+
+    <h2 class="ty-title">Заявка принята!</h2>
+    <p class="ty-desc">Свяжемся с вами в течение <strong>15 минут</strong>.<br>Если не дозвонимся — напишем в WhatsApp.</p>
+
+    <div class="ty-btns">
+      <a href="https://wa.me/74842000000" class="btn btn-pri btn-full">💬 Написать в WhatsApp</a>
+      <button class="btn btn-sec btn-full" onclick="closeTY()">Вернуться на сайт</button>
+    </div>
+
+    <div class="ty-progress"><div class="ty-prog-bar" id="tyProgBar"></div></div>
+    <p class="ty-note">Пн–Пт 9:00–19:00 · Сб 10:00–16:00</p>
+  </div>
+</div>
+
+<script>
+/* ════════ Burger ════════ */
+const burger = document.getElementById('burgerBtn');
+const mobMenu = document.getElementById('mobMenu');
+burger.addEventListener('click', () => {
+  burger.classList.toggle('open');
+  mobMenu.classList.toggle('open');
+  burger.setAttribute('aria-expanded', mobMenu.classList.contains('open'));
+});
+document.querySelectorAll('.mob-menu nav a').forEach(a => {
+  a.addEventListener('click', () => {
+    burger.classList.remove('open');
+    mobMenu.classList.remove('open');
+  });
+});
+// Закрытие по клику вне меню
+document.addEventListener('click', (e) => {
+  if (!burger.contains(e.target) && !mobMenu.contains(e.target)) {
+    burger.classList.remove('open');
+    mobMenu.classList.remove('open');
+  }
+});
+
+/* ════════ Scroll animations ════════ */
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
+}, { threshold: 0.12 });
+document.querySelectorAll('.anim').forEach(el => observer.observe(el));
+
+/* ════════ Счётчики ════════ */
+const countObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    const el = e.target;
+    const target = +el.dataset.count;
+    if (!target) return;
+    let cur = 0;
+    const step = Math.ceil(target / 40);
+    const t = setInterval(() => {
+      cur = Math.min(cur + step, target);
+      el.textContent = cur;
+      if (cur >= target) clearInterval(t);
+    }, 30);
+    countObserver.unobserve(el);
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('[data-count]').forEach(el => countObserver.observe(el));
+
+/* ════════ Кнопка вверх ════════ */
+const goTop = document.getElementById('goTop');
+window.addEventListener('scroll', () => {
+  goTop.classList.toggle('vis', window.scrollY > 400);
+});
+
+/* ════════ Табы преимуществ ════════ */
+document.querySelectorAll('.tab').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(b => b.classList.remove('on'));
+    document.querySelectorAll('.ben-set').forEach(s => s.classList.remove('on'));
+    btn.classList.add('on');
+    document.querySelector(`.ben-set[data-set="${btn.dataset.tab}"]`).classList.add('on');
+  });
+});
+
+/* ════════ Фильтр проектов ════════ */
+document.querySelectorAll('.flt').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.flt').forEach(b => b.classList.remove('on'));
+    btn.classList.add('on');
+    const f = btn.dataset.f;
+    document.querySelectorAll('.proj-card').forEach(card => {
+      if (f === 'all') { card.classList.remove('hidden'); return; }
+      const type = card.dataset.type;
+      const size = card.dataset.size;
+      const show = (f === 'one' && type === 'one') ||
+                   (f === 'two' && type === 'two') ||
+                   (f === 'small' && size === 'small') ||
+                   (f === 'mid' && size === 'mid') ||
+                   (f === 'big' && size === 'big');
+      card.classList.toggle('hidden', !show);
+    });
+  });
+});
+
+/* ════════ FAQ аккордеон ════════ */
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const answer = item.querySelector('.faq-a');
+    const isOpen = item.classList.contains('open');
+    // Закрываем все
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-a').style.maxHeight = null;
+    });
+    // Открываем если был закрыт
+    if (!isOpen) {
+      item.classList.add('open');
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+    }
+  });
+});
+
+/* ════════ Калькулятор ════════ */
+const prices = {
+  base: { perSqm: 28000, found: [6000, 5000, 4500], floors: [1, 1.1, 1.25], label: 'Коробка' },
+  warm: { perSqm: 42000, found: [6000, 5000, 4500], floors: [1, 1.1, 1.25], label: 'Тёплый контур' },
+  full: { perSqm: 58000, found: [6000, 5000, 4500], floors: [1, 1.1, 1.25], label: 'Под ключ' }
+};
+
+function fmtM(n) {
+  return (n / 1e6).toFixed(1).replace('.', ',') + ' млн ₽';
+}
+function fmtK(n) {
+  return '~' + Math.round(n / 1000) * 1000 .toLocaleString('ru') + ' ₽';
+}
+
+function calcUpdate() {
+  const area = +document.getElementById('areaRange').value;
+  document.getElementById('areaVal').innerHTML = area + ' <em>м²</em>';
+
+  const floorVal = +([...document.querySelectorAll('[name=floor]')].find(r => r.checked)?.value || 1);
+  const foundIdx = +([...document.querySelectorAll('[name=found]')].find(r => r.checked)?.value || 0);
+  const pkgKey = ([...document.querySelectorAll('[name=pkg]')].find(r => r.checked)?.value || 'full');
+
+  const pkg = prices[pkgKey];
+  const floorMult = floorVal === 1 ? 1 : floorVal === 1.5 ? 1.1 : 1.25;
+  const foundCost = area * pkg.found[foundIdx];
+  const boxCost = area * 15000 * floorMult;
+  const roofCost = area * 6000;
+  const finCost = pkgKey === 'base' ? 0 : pkgKey === 'warm' ? area * 8000 : area * 29000;
+  const total = foundCost + boxCost + roofCost + finCost;
+
+  document.getElementById('resPrice').textContent = fmtM(total);
+  document.getElementById('resSub').textContent = `${pkg.label} · ${area} м² · ${floorVal === 1.5 ? '1,5' : floorVal} эт.`;
+  document.getElementById('rFund').textContent = fmtK(foundCost);
+  document.getElementById('rBox').textContent = fmtK(boxCost);
+  document.getElementById('rRoof').textContent = fmtK(roofCost);
+  document.getElementById('rFin').textContent = pkgKey === 'base' ? 'не включена' : fmtK(finCost);
+}
+calcUpdate();
+
+/* ════════ Формы ════════ */
+function submitForm(id) {
+  const nameEl = id === 'calcForm' ? document.getElementById('calcName') : document.getElementById('ctaName');
+  const phoneEl = id === 'calcForm' ? document.getElementById('calcPhone') : document.getElementById('ctaPhone');
+  if (!nameEl.value.trim()) { nameEl.focus(); nameEl.style.borderColor = '#e55'; return; }
+  if (!phoneEl.value.trim()) { phoneEl.focus(); phoneEl.style.borderColor = '#e55'; return; }
+  showTY();
+}
+
+function showTY() {
+  const overlay = document.getElementById('tyOverlay');
+  overlay.classList.add('show');
+  document.body.style.overflow = 'hidden';
+  // Перезапускаем CSS анимации
+  const animated = overlay.querySelectorAll('.ty-box, .ty-circle, .ty-tick, .ty-title, .ty-desc, .ty-btns, .ty-note, .ty-prog-bar');
+  animated.forEach(el => { el.style.animation = 'none'; el.offsetHeight; el.style.animation = ''; });
+  launchConfetti();
+}
+function closeTY() {
+  const overlay = document.getElementById('tyOverlay');
+  overlay.classList.remove('show');
+  document.body.style.overflow = '';
+  const canvas = document.getElementById('confettiCanvas');
+  if (canvas) canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
+}
+document.getElementById('tyOverlay').addEventListener('click', function(e) {
+  if (e.target === this) closeTY();
+});
+
+/* ════════ Конфетти ════════ */
+let confettiRaf = null;
+function launchConfetti() {
+  const canvas = document.getElementById('confettiCanvas');
+  if (!canvas) return;
+  cancelAnimationFrame(confettiRaf);
+  const ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  const colors = ['#D4600A','#F5A030','#5C7A5C','#8B6F47','#F5F0E8','#E0D8CC','#B85208'];
+  const pieces = Array.from({length: 110}, () => ({
+    x: Math.random() * canvas.width,
+    y: -10 - Math.random() * 120,
+    w: Math.random() * 10 + 5,
+    h: Math.random() * 5 + 3,
+    color: colors[Math.floor(Math.random() * colors.length)],
+    vy: Math.random() * 3 + 2,
+    vx: Math.random() * 3 - 1.5,
+    rot: Math.random() * 360,
+    vr: Math.random() * 7 - 3.5
+  }));
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    let alive = false;
+    pieces.forEach(p => {
+      p.y += p.vy; p.x += p.vx; p.rot += p.vr;
+      const alpha = Math.max(0, 1 - p.y / canvas.height * 1.1);
+      if (alpha > 0 && p.y < canvas.height + 20) {
+        alive = true;
+        ctx.save();
+        ctx.globalAlpha = alpha;
+        ctx.translate(p.x + p.w / 2, p.y + p.h / 2);
+        ctx.rotate(p.rot * Math.PI / 180);
+        ctx.fillStyle = p.color;
+        ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+        ctx.restore();
+      }
+    });
+    if (alive) confettiRaf = requestAnimationFrame(draw);
+  }
+  draw();
+}
+
+/* ════════ Телефонная маска ════════ */
+function phoneMask(el) {
+  el.addEventListener('input', function() {
+    let v = this.value.replace(/\D/g, '');
+    if (v.startsWith('8')) v = '7' + v.slice(1);
+    if (v.startsWith('7')) {
+      this.value = '+7 (' + v.slice(1,4) + (v.length > 4 ? ') ' + v.slice(4,7) : '') +
+        (v.length > 7 ? '-' + v.slice(7,9) : '') + (v.length > 9 ? '-' + v.slice(9,11) : '');
+    }
+  });
+}
+document.querySelectorAll('[type=tel]').forEach(phoneMask);
+
+/* ════════ Smooth nav ════════ */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', function(e) {
+    const id = this.getAttribute('href');
+    if (id === '#') return;
+    const target = document.querySelector(id);
+    if (!target) return;
+    e.preventDefault();
+    const top = target.getBoundingClientRect().top + window.scrollY - 68;
+    window.scrollTo({ top, behavior: 'smooth' });
+  });
+});
+
+/* ════════ Observers for anim-left / anim-right / anim-scale ════════ */
+const obs2 = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.anim-left, .anim-right, .anim-scale').forEach(el => obs2.observe(el));
+
+/* ════════ Scroll progress bar ════════ */
+const prog = document.getElementById('scroll-prog');
+function updateProgress() {
+  const scrolled = window.scrollY;
+  const total = document.documentElement.scrollHeight - window.innerHeight;
+  prog.style.width = (scrolled / total * 100) + '%';
+}
+window.addEventListener('scroll', updateProgress, { passive: true });
+
+/* ════════ Header scrolled state ════════ */
+const hdrEl = document.querySelector('.hdr');
+window.addEventListener('scroll', () => {
+  hdrEl.classList.toggle('scrolled', window.scrollY > 80);
+}, { passive: true });
+
+/* ════════ Parallax hero background ════════ */
+const heroBg = document.querySelector('.hero-bg');
+const heroSection = document.querySelector('.hero');
+function parallax() {
+  if (!heroBg) return;
+  const scrolled = window.scrollY;
+  const heroH = heroSection.offsetHeight;
+  if (scrolled < heroH + 200) {
+    heroBg.style.transform = 'translateY(' + (scrolled * 0.3) + 'px)';
+  }
+}
+window.addEventListener('scroll', parallax, { passive: true });
+
+/* ════════ Stagger reveal for grid cards ════════ */
+const cardObs = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.style.opacity = '1', i * 60);
+      cardObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.05 });
+document.querySelectorAll('.ben-card, .proj-card, .rev-card, .vid-card, .proc-item, .gar-card, .team-card').forEach(el => {
+  if (!el.classList.contains('anim')) {
+    el.style.transition = 'opacity .5s ease-out, transform .4s ease-out, box-shadow .3s, border-color .3s';
+  }
+});
+
+/* ════════ UTP chip entrance animation ════════ */
+document.querySelectorAll('.utp-chip').forEach((chip, i) => {
+  chip.style.opacity = '0';
+  chip.style.transform = 'translateY(16px)';
+  chip.style.transition = 'opacity .5s ease-out, transform .5s ease-out, background .25s, border-color .25s';
+  chip.style.transitionDelay = (0.6 + i * 0.15) + 's';
+  setTimeout(() => {
+    chip.style.opacity = '1';
+    chip.style.transform = 'translateY(0)';
+  }, 100);
+});
+
+/* ════════ Pulse effect on CTA button ════════ */
+const ctaBtn = document.querySelector('.hero-ctas .btn-pri');
+if (ctaBtn) {
+  ctaBtn.addEventListener('mouseenter', () => {
+    ctaBtn.style.transform = 'translateY(-3px) scale(1.02)';
+  });
+  ctaBtn.addEventListener('mouseleave', () => {
+    ctaBtn.style.transform = '';
+  });
+}
+</script>
+</body>
+</html>
